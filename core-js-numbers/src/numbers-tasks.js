@@ -307,7 +307,7 @@ function getSumToN(n) {
  *   5   => 5  // 5
  */
 function getSumOfDigits(num) {
-  cost value = num;
+  const value = num;
   const sum = 0;
   while (value) {
     sum += value % 10;
