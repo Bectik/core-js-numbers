@@ -51,7 +51,7 @@ function getCircleCircumference(radius) {
  */
 function getAverage(value1, value2) {
   const sum = value1 + value2;
-  result = sum / 2;
+  const result = sum / 2;
   return result;
 }
 
@@ -86,7 +86,7 @@ function getDistanceBetweenPoints(x1, y1, x2, y2) {
  *   x + 8 = 0       => -8
  *   5*x = 0         => 0
  */
-function getLinearEquationRoot(/* a, b */) {
+function getLinearEquationRoot(a, b) {
   return -b / a;
 }
 
@@ -269,7 +269,7 @@ function getFibonacciNumber(index) {
   let first = 1;
   let second = 1;
   for (let i = 3; i <= index; i++) {
-    let next = first + second;
+    const next = first + second;
     first = second;
     second = next;
   }
@@ -330,7 +330,7 @@ function getSumOfDigits(num) {
 function isPowerOfTwo(num) {
   for (let i = 1; i <= num; i *= 2) {
     if (i === num) {
-      return true
+      return true;
     }
   }
   return false;
