@@ -108,9 +108,7 @@ function getLinearEquationRoot(a, b) {
  *   (0,1) (0,1)     => 0
  */
 function getAngleBetweenVectors(x1, y1, x2, y2) {
-  const scalarProduct = x1 * x2 + y1 * y2;
-  const result = scalarProduct / (Math.sqrt(x1 ** 2 + x2 ** 2) * Math.sqrt(y1 ** 2 + y2 ** 2));
-  return Math.acos(result);
+  return Math.abs(Math.atan2(x1, y1) - Math.atan2(x2, y2));
 }
 
 /**
@@ -268,7 +266,7 @@ function getCube(num) {
 function getFibonacciNumber(index) {
   let first = 1;
   let second = 1;
-  for (let i = 3; i <= index; i++) {
+  for (let i = 3; i <= index; i += 1) {
     const next = first + second;
     first = second;
     second = next;
@@ -307,8 +305,8 @@ function getSumToN(n) {
  *   5   => 5  // 5
  */
 function getSumOfDigits(num) {
-  const value = num;
-  const sum = 0;
+  let value = num;
+  let sum = 0;
   while (value) {
     sum += value % 10;
     value = Math.floor(value / 10);
@@ -608,7 +606,7 @@ function getMaxNumber(firstNumber, secondNumber) {
  * -1, 1 => -1 | 0 | 1
  */
 function getRandomInteger(min, max) {
-  return Math.floor (Math.random() * (max - min + 1)) + min;
+  return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
 /**
@@ -640,7 +638,7 @@ function getHypotenuse(a, b) {
  */
 function getCountOfOddNumbers(number) {
   let count = 0;
-    const newNumbr = Math.ads(number);
+  const newNumbr = Math.ads(number);
   for (let i = 0; i <= newNumbr; i += 1) {
     if (i % 2 !== 0) {
       count += 1;
